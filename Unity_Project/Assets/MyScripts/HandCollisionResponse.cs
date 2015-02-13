@@ -100,7 +100,7 @@ public class HandCollisionResponse : MonoBehaviour {
 		return null;
 	}
 
-	bool collisionDirection(ContactPoint[] contacts){
+	bool isOutsideCollision(ContactPoint[] contacts){
 		Vector3 contact_normal = averageContacts(contacts);
 		Vector3 palm_normal = getPalm().transform.rotation.eulerAngles;
 		float angle_difference = Vector3.Angle(contact_normal,palm_normal);
@@ -131,8 +131,7 @@ public class HandCollisionResponse : MonoBehaviour {
 
 			//Getting key and k for affected motors
 			string affectedMotors = "inside";
-			bool isOutsideCollision = collisionDirection(collision.contacts);
-			if(isOutsideCollision)
+     		if(isOutsideCollision(collision.contacts))
 				affectedMotors = "outside";
 			float k = getK (bone_position,affectedMotors);
 				
