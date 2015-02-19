@@ -39,10 +39,10 @@
 	<Reference Include="System.Core" />
 	<Reference Include="System.Xml.Linq" />
 	<Reference Include="UnityEngine">
-	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>F:/Dev/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>F:/Dev/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
@@ -106,6 +106,7 @@
      <Compile Include="Assets\MyScripts\CollisionResponse.cs" />
      <Compile Include="Assets\MyScripts\HandCollisionResponse.cs" />
      <Compile Include="Assets\MyScripts\Movement.cs" />
+     <Compile Include="Assets\MyScripts\Networking.cs" />
      <Compile Include="Assets\MyScripts\Sending.cs" />
      <Compile Include="Assets\MyScripts\Spinny.cs" />
      <Compile Include="Assets\MyScripts\arduino.cs" />
@@ -145,7 +146,7 @@
      <None Include="Assets\Standard Assets\Water (Pro Only)\Water4\Sources\Shaders\FX-Water4.shader" />
      <None Include="Assets\LeapMotion\Shaders\LeapUndistorted.shader" />
  <Reference Include="LeapCSharp.NET3.5">
- <HintPath>F:/Jacky/VR-Glove/Unity_Project/Assets/Plugins/x86/LeapCSharp.NET3.5.dll</HintPath>
+ <HintPath>F:/Dropbox/VR-Glove/Unity_Project/Assets/Plugins/x86/LeapCSharp.NET3.5.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
