@@ -9,13 +9,23 @@ public class Sending : MonoBehaviour {
 	public static int[] positions = {0,0,0,0,0,0};
 	public static int[] levels = {0,0,0,0,0,0};
 
+	public static bool usingBluetooth = true;
+
 	void Start () {
-		OpenConnection();
+		if(!usingBluetooth)
+			OpenConnection();
 	}
 
 	void OnApplicationQuit() 
 	{
 		sp.Close();
+	}
+
+	public static void sendMsg(string msg){
+		if (usingBluetooth)
+			Networking.send (msg);
+		else
+			sp.Write(msg);
 	}
 
 	public void OpenConnection() 
@@ -103,7 +113,7 @@ public class Sending : MonoBehaviour {
 		setALevel (pos,iData);
 		string msg = constructData (dType,dData,iType);
 		Debug.Log ("single msg is " + msg);	
-		sp.Write(msg);
+		sendMsg (msg);
 	}
 
 	public static void vibrateMultiple(int[] set_positions, int dType, int dData, int iType, int[] iData){
@@ -112,7 +122,8 @@ public class Sending : MonoBehaviour {
 		setMultipleLevels (iData);
 		string msg = constructData (dType,dData,iType);
 		Debug.Log ("multiple msg is " + msg);	
-		sp.Write(msg);
+		sendMsg (msg);
+
 	}
 
 	public static void stopVibrate(int pos){

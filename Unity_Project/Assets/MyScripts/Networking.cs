@@ -7,14 +7,14 @@ using System.Text;
 
 public class Networking : MonoBehaviour {
 
-	static string serverDest = "http://localhost/send";
+	public static string serverDest = "http://localhost/send";
 
 	// Use this for initialization
 	void Start () {
 		Debug.Log ("Networking Service Started");
 	}
 
-	void PostToServer(string postData){
+	static void PostToServer(string postData){
 		Debug.Log ("posting to server with " + postData);
 
 		//Sending Request
@@ -42,12 +42,20 @@ public class Networking : MonoBehaviour {
 		dataStream.Close ();
 		response.Close ();
 	}
-	
+
+	public static void send(string msg){
+		PostToServer (msg);
+	}
+
+	static void testSend(){
+		send ("HI");
+	}
+
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetKeyDown ("n")) {
 			Debug.Log("key press n logged");
-			PostToServer("HI");
+			testSend();
 		}
 	}
 }
