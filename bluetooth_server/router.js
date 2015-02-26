@@ -8,8 +8,6 @@ function route(handle, pathname, response, postData){
         response.write("404 Not Found");
         response.end();
     }
-        
-    
 }
 
 exports.route = route;
