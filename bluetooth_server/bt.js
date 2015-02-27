@@ -13,9 +13,10 @@ function sendMsg(msg){
     console.log("writing data: "+msg);
     if(connected){
         btSerial.write(new Buffer(msg, 'ascii'), function(err, bytesWritten) {
-        if (err){
-            console.log(err);
-        }
+        if(err)
+            console.log("error occurred during write: "+err);
+        else
+            console.log("bytesWritten: "+bytesWritten);
     });
     }
     else{
