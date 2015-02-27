@@ -91,8 +91,8 @@ int toInt(char k){
 
 void loop()
 {
-  Serial.readBytesUntil('%', inData, 17);
-  if (inData[0] == '&'){
+  Serial.readBytesUntil('E', inData, 17);
+  if (inData[0] == 'B'){
     
     int dType = toInt(inData[1]);
     int dData = toInt(inData[2])*durationUnit;

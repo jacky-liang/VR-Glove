@@ -14,25 +14,26 @@ public class Networking : MonoBehaviour {
 		Debug.Log ("Networking Service Started");
 	}
 
-	static void PostToServer(string postData){
-		Debug.Log ("posting to server with " + postData);
+	static void GetToServer(string query){
+		Debug.Log ("get to server with query: " + query);
 
 		//Sending Request
-		WebRequest request = WebRequest.Create (serverDest);
-		request.Method = "POST";
-		byte[] byteArray = Encoding.UTF8.GetBytes (postData);
+		WebRequest request = WebRequest.Create (serverDest+query);
+		//request.Method = "GET";
+		/*
+		byte[] byteArray = Encoding.UTF8.GetBytes (query);
 		request.ContentType = "application/x-www-form-urlencoded";
 		request.ContentLength = byteArray.Length;
 		//writing request to data stream
 		Stream dataStream = request.GetRequestStream ();
 		dataStream.Write (byteArray, 0, byteArray.Length);
-		dataStream.Close ();
+		dataStream.Close ();*/
 
 		//Getting Response
 		WebResponse response = request.GetResponse ();
 		// Display the status.
 		Console.WriteLine (((HttpWebResponse)response).StatusDescription);
-		dataStream = response.GetResponseStream ();
+		Stream dataStream = response.GetResponseStream ();
 		StreamReader reader = new StreamReader (dataStream);
 		string responseFromServer = reader.ReadToEnd ();
 		Console.WriteLine (responseFromServer);
@@ -44,7 +45,7 @@ public class Networking : MonoBehaviour {
 	}
 
 	public static void send(string msg){
-		PostToServer (msg);
+		GetToServer ("?data="+msg);
 	}
 
 	static void testSend(){

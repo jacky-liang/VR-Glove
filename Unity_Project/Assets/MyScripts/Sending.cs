@@ -55,7 +55,7 @@ public class Sending : MonoBehaviour {
 
 	public static string constructData(int dType, int dData, int iType){
 		char[] data = new char[17];
-		data [0] = '&';
+		data [0] = 'B';
 		data [1] = intToNumChar(dType);
 		data [2] = intToNumChar(dData);
 		data [3] = intToNumChar(iType);
@@ -63,7 +63,7 @@ public class Sending : MonoBehaviour {
 			data [i] = intToNumChar(positions[i-4]);
 		for (int i = 10; i<16; i++) 
 			data [i] = intToNumChar(levels[i-10]);
-		data [16] = '%';
+		data [16] = 'E';
 		return new string (data);
 	}
 
