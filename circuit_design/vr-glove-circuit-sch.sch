@@ -6351,27 +6351,27 @@ Spark Fun Electronics SKU : COM-00107</description>
 <parts>
 <part name="U1" library="SparkFun-Boards" deviceset="ARDUINO_SHIELD" device="NO_SILK"/>
 <part name="JP1" library="SparkFun-Connectors" deviceset="POWER_JACK" device="1"/>
-<part name="U$1" library="GeekAmmo" deviceset="N-CHANNEL-MOSFET" device="-BSS138"/>
+<part name="T1" library="GeekAmmo" deviceset="N-CHANNEL-MOSFET" device="-BSS138"/>
 <part name="D7" library="SparkFun-DiscreteSemi" deviceset="DIODE" device="SMA"/>
 <part name="C1" library="SparkFun-Capacitors" deviceset="CAP" device="PTH"/>
 <part name="R7" library="SparkFun-Resistors" deviceset="RESISTOR" device="PTH-1/2W"/>
-<part name="U$2" library="GeekAmmo" deviceset="N-CHANNEL-MOSFET" device="-BSS138"/>
+<part name="T2" library="GeekAmmo" deviceset="N-CHANNEL-MOSFET" device="-BSS138"/>
 <part name="D1" library="SparkFun-DiscreteSemi" deviceset="DIODE" device="SMA"/>
 <part name="C2" library="SparkFun-Capacitors" deviceset="CAP" device="PTH"/>
 <part name="R1" library="SparkFun-Resistors" deviceset="RESISTOR" device="PTH-1/2W"/>
-<part name="U$3" library="GeekAmmo" deviceset="N-CHANNEL-MOSFET" device="-BSS138"/>
+<part name="T3" library="GeekAmmo" deviceset="N-CHANNEL-MOSFET" device="-BSS138"/>
 <part name="D2" library="SparkFun-DiscreteSemi" deviceset="DIODE" device="SMA"/>
 <part name="C3" library="SparkFun-Capacitors" deviceset="CAP" device="PTH"/>
 <part name="R2" library="SparkFun-Resistors" deviceset="RESISTOR" device="PTH-1/2W"/>
-<part name="U$4" library="GeekAmmo" deviceset="N-CHANNEL-MOSFET" device="-BSS138"/>
+<part name="T4" library="GeekAmmo" deviceset="N-CHANNEL-MOSFET" device="-BSS138"/>
 <part name="D3" library="SparkFun-DiscreteSemi" deviceset="DIODE" device="SMA"/>
 <part name="C4" library="SparkFun-Capacitors" deviceset="CAP" device="PTH"/>
 <part name="R3" library="SparkFun-Resistors" deviceset="RESISTOR" device="PTH-1/2W"/>
-<part name="U$5" library="GeekAmmo" deviceset="N-CHANNEL-MOSFET" device="-BSS138"/>
+<part name="T5" library="GeekAmmo" deviceset="N-CHANNEL-MOSFET" device="-BSS138"/>
 <part name="D4" library="SparkFun-DiscreteSemi" deviceset="DIODE" device="SMA"/>
 <part name="C5" library="SparkFun-Capacitors" deviceset="CAP" device="PTH"/>
 <part name="R4" library="SparkFun-Resistors" deviceset="RESISTOR" device="PTH-1/2W"/>
-<part name="U$6" library="GeekAmmo" deviceset="N-CHANNEL-MOSFET" device="-BSS138"/>
+<part name="T6" library="GeekAmmo" deviceset="N-CHANNEL-MOSFET" device="-BSS138"/>
 <part name="D5" library="SparkFun-DiscreteSemi" deviceset="DIODE" device="SMA"/>
 <part name="C6" library="SparkFun-Capacitors" deviceset="CAP" device="PTH"/>
 <part name="R5" library="SparkFun-Resistors" deviceset="RESISTOR" device="PTH-1/2W"/>
@@ -6395,27 +6395,27 @@ Spark Fun Electronics SKU : COM-00107</description>
 <instances>
 <instance part="U1" gate="G$1" x="12.7" y="81.28"/>
 <instance part="JP1" gate="G$1" x="-45.72" y="139.7"/>
-<instance part="U$1" gate="G$1" x="71.12" y="116.84"/>
+<instance part="T1" gate="G$1" x="71.12" y="116.84"/>
 <instance part="D7" gate="G$1" x="83.82" y="106.68" rot="R270"/>
 <instance part="C1" gate="G$1" x="76.2" y="106.68" rot="R180"/>
 <instance part="R7" gate="G$1" x="58.42" y="114.3"/>
-<instance part="U$2" gate="G$1" x="71.12" y="88.9"/>
+<instance part="T2" gate="G$1" x="71.12" y="88.9"/>
 <instance part="D1" gate="G$1" x="83.82" y="78.74" rot="R270"/>
 <instance part="C2" gate="G$1" x="76.2" y="78.74" rot="R180"/>
 <instance part="R1" gate="G$1" x="58.42" y="86.36"/>
-<instance part="U$3" gate="G$1" x="73.66" y="60.96"/>
+<instance part="T3" gate="G$1" x="73.66" y="60.96"/>
 <instance part="D2" gate="G$1" x="86.36" y="50.8" rot="R270"/>
 <instance part="C3" gate="G$1" x="78.74" y="50.8" rot="R180"/>
 <instance part="R2" gate="G$1" x="60.96" y="58.42"/>
-<instance part="U$4" gate="G$1" x="109.22" y="101.6"/>
+<instance part="T4" gate="G$1" x="109.22" y="101.6"/>
 <instance part="D3" gate="G$1" x="121.92" y="91.44" rot="R270"/>
 <instance part="C4" gate="G$1" x="114.3" y="91.44" rot="R180"/>
 <instance part="R3" gate="G$1" x="96.52" y="99.06"/>
-<instance part="U$5" gate="G$1" x="109.22" y="73.66"/>
+<instance part="T5" gate="G$1" x="109.22" y="73.66"/>
 <instance part="D4" gate="G$1" x="121.92" y="63.5" rot="R270"/>
 <instance part="C5" gate="G$1" x="114.3" y="63.5" rot="R180"/>
 <instance part="R4" gate="G$1" x="96.52" y="71.12"/>
-<instance part="U$6" gate="G$1" x="109.22" y="45.72"/>
+<instance part="T6" gate="G$1" x="109.22" y="45.72"/>
 <instance part="D5" gate="G$1" x="121.92" y="35.56" rot="R270"/>
 <instance part="C6" gate="G$1" x="114.3" y="35.56" rot="R180"/>
 <instance part="R5" gate="G$1" x="96.52" y="43.18"/>
@@ -6439,7 +6439,7 @@ Spark Fun Electronics SKU : COM-00107</description>
 <net name="N$1" class="0">
 <segment>
 <pinref part="R7" gate="G$1" pin="2"/>
-<pinref part="U$1" gate="G$1" pin="G"/>
+<pinref part="T1" gate="G$1" pin="G"/>
 <wire x1="63.5" y1="114.3" x2="66.04" y2="114.3" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -6448,7 +6448,7 @@ Spark Fun Electronics SKU : COM-00107</description>
 <pinref part="D7" gate="G$1" pin="A"/>
 <pinref part="C1" gate="G$1" pin="2"/>
 <wire x1="83.82" y1="109.22" x2="76.2" y2="109.22" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="S"/>
+<pinref part="T1" gate="G$1" pin="S"/>
 <wire x1="76.2" y1="109.22" x2="73.66" y2="109.22" width="0.1524" layer="91"/>
 <junction x="76.2" y="109.22"/>
 <wire x1="76.2" y1="109.22" x2="134.62" y2="111.76" width="0.1524" layer="91"/>
@@ -6460,7 +6460,7 @@ Spark Fun Electronics SKU : COM-00107</description>
 <net name="N$4" class="0">
 <segment>
 <pinref part="R1" gate="G$1" pin="2"/>
-<pinref part="U$2" gate="G$1" pin="G"/>
+<pinref part="T2" gate="G$1" pin="G"/>
 <wire x1="63.5" y1="86.36" x2="66.04" y2="86.36" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -6469,7 +6469,7 @@ Spark Fun Electronics SKU : COM-00107</description>
 <pinref part="D1" gate="G$1" pin="A"/>
 <pinref part="C2" gate="G$1" pin="2"/>
 <wire x1="83.82" y1="81.28" x2="76.2" y2="81.28" width="0.1524" layer="91"/>
-<pinref part="U$2" gate="G$1" pin="S"/>
+<pinref part="T2" gate="G$1" pin="S"/>
 <wire x1="76.2" y1="81.28" x2="73.66" y2="81.28" width="0.1524" layer="91"/>
 <junction x="76.2" y="81.28"/>
 <wire x1="76.2" y1="81.28" x2="81.28" y2="86.36" width="0.1524" layer="91"/>
@@ -6481,7 +6481,7 @@ Spark Fun Electronics SKU : COM-00107</description>
 <net name="N$7" class="0">
 <segment>
 <pinref part="R2" gate="G$1" pin="2"/>
-<pinref part="U$3" gate="G$1" pin="G"/>
+<pinref part="T3" gate="G$1" pin="G"/>
 <wire x1="66.04" y1="58.42" x2="68.58" y2="58.42" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -6490,7 +6490,7 @@ Spark Fun Electronics SKU : COM-00107</description>
 <pinref part="D2" gate="G$1" pin="A"/>
 <pinref part="C3" gate="G$1" pin="2"/>
 <wire x1="86.36" y1="53.34" x2="78.74" y2="53.34" width="0.1524" layer="91"/>
-<pinref part="U$3" gate="G$1" pin="S"/>
+<pinref part="T3" gate="G$1" pin="S"/>
 <wire x1="78.74" y1="53.34" x2="76.2" y2="53.34" width="0.1524" layer="91"/>
 <junction x="78.74" y="53.34"/>
 <wire x1="78.74" y1="53.34" x2="129.54" y2="50.8" width="0.1524" layer="91"/>
@@ -6501,7 +6501,7 @@ Spark Fun Electronics SKU : COM-00107</description>
 <net name="N$10" class="0">
 <segment>
 <pinref part="R3" gate="G$1" pin="2"/>
-<pinref part="U$4" gate="G$1" pin="G"/>
+<pinref part="T4" gate="G$1" pin="G"/>
 <wire x1="101.6" y1="99.06" x2="104.14" y2="99.06" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -6510,7 +6510,7 @@ Spark Fun Electronics SKU : COM-00107</description>
 <pinref part="D3" gate="G$1" pin="A"/>
 <pinref part="C4" gate="G$1" pin="2"/>
 <wire x1="121.92" y1="93.98" x2="114.3" y2="93.98" width="0.1524" layer="91"/>
-<pinref part="U$4" gate="G$1" pin="S"/>
+<pinref part="T4" gate="G$1" pin="S"/>
 <wire x1="114.3" y1="93.98" x2="111.76" y2="93.98" width="0.1524" layer="91"/>
 <junction x="114.3" y="93.98"/>
 <wire x1="114.3" y1="93.98" x2="142.24" y2="96.52" width="0.1524" layer="91"/>
@@ -6522,7 +6522,7 @@ Spark Fun Electronics SKU : COM-00107</description>
 <net name="N$13" class="0">
 <segment>
 <pinref part="R4" gate="G$1" pin="2"/>
-<pinref part="U$5" gate="G$1" pin="G"/>
+<pinref part="T5" gate="G$1" pin="G"/>
 <wire x1="101.6" y1="71.12" x2="104.14" y2="71.12" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -6531,7 +6531,7 @@ Spark Fun Electronics SKU : COM-00107</description>
 <pinref part="D4" gate="G$1" pin="A"/>
 <pinref part="C5" gate="G$1" pin="2"/>
 <wire x1="121.92" y1="66.04" x2="114.3" y2="66.04" width="0.1524" layer="91"/>
-<pinref part="U$5" gate="G$1" pin="S"/>
+<pinref part="T5" gate="G$1" pin="S"/>
 <wire x1="114.3" y1="66.04" x2="111.76" y2="66.04" width="0.1524" layer="91"/>
 <junction x="114.3" y="66.04"/>
 <pinref part="JP11" gate="G$1" pin="2"/>
@@ -6542,7 +6542,7 @@ Spark Fun Electronics SKU : COM-00107</description>
 <net name="N$16" class="0">
 <segment>
 <pinref part="R5" gate="G$1" pin="2"/>
-<pinref part="U$6" gate="G$1" pin="G"/>
+<pinref part="T6" gate="G$1" pin="G"/>
 <wire x1="101.6" y1="43.18" x2="104.14" y2="43.18" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -6551,7 +6551,7 @@ Spark Fun Electronics SKU : COM-00107</description>
 <pinref part="D5" gate="G$1" pin="A"/>
 <pinref part="C6" gate="G$1" pin="2"/>
 <wire x1="121.92" y1="38.1" x2="114.3" y2="38.1" width="0.1524" layer="91"/>
-<pinref part="U$6" gate="G$1" pin="S"/>
+<pinref part="T6" gate="G$1" pin="S"/>
 <wire x1="114.3" y1="38.1" x2="111.76" y2="38.1" width="0.1524" layer="91"/>
 <junction x="114.3" y="38.1"/>
 <wire x1="114.3" y1="38.1" x2="142.24" y2="43.18" width="0.1524" layer="91"/>
@@ -6716,7 +6716,7 @@ Spark Fun Electronics SKU : COM-00107</description>
 </net>
 <net name="N$3" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="D"/>
+<pinref part="T1" gate="G$1" pin="D"/>
 <wire x1="73.66" y1="124.46" x2="53.34" y2="124.46" width="0.1524" layer="91"/>
 <wire x1="53.34" y1="124.46" x2="50.8" y2="124.46" width="0.1524" layer="91"/>
 <wire x1="50.8" y1="124.46" x2="48.26" y2="124.46" width="0.1524" layer="91"/>
@@ -6727,24 +6727,24 @@ Spark Fun Electronics SKU : COM-00107</description>
 <pinref part="U1" gate="G$1" pin="GND@2"/>
 <wire x1="-12.7" y1="106.68" x2="-12.7" y2="68.58" width="0.1524" layer="91"/>
 <wire x1="-12.7" y1="68.58" x2="0" y2="68.58" width="0.1524" layer="91"/>
-<pinref part="U$2" gate="G$1" pin="D"/>
+<pinref part="T2" gate="G$1" pin="D"/>
 <wire x1="73.66" y1="96.52" x2="45.72" y2="96.52" width="0.1524" layer="91"/>
 <wire x1="45.72" y1="96.52" x2="45.72" y2="124.46" width="0.1524" layer="91"/>
 <junction x="45.72" y="124.46"/>
-<pinref part="U$4" gate="G$1" pin="D"/>
+<pinref part="T4" gate="G$1" pin="D"/>
 <wire x1="111.76" y1="109.22" x2="111.76" y2="127" width="0.1524" layer="91"/>
 <wire x1="111.76" y1="127" x2="53.34" y2="127" width="0.1524" layer="91"/>
 <wire x1="53.34" y1="127" x2="53.34" y2="124.46" width="0.1524" layer="91"/>
 <junction x="53.34" y="124.46"/>
-<pinref part="U$3" gate="G$1" pin="D"/>
+<pinref part="T3" gate="G$1" pin="D"/>
 <wire x1="76.2" y1="68.58" x2="48.26" y2="68.58" width="0.1524" layer="91"/>
 <wire x1="48.26" y1="68.58" x2="48.26" y2="124.46" width="0.1524" layer="91"/>
 <junction x="48.26" y="124.46"/>
-<pinref part="U$5" gate="G$1" pin="D"/>
+<pinref part="T5" gate="G$1" pin="D"/>
 <wire x1="111.76" y1="81.28" x2="50.8" y2="83.82" width="0.1524" layer="91"/>
 <wire x1="50.8" y1="83.82" x2="50.8" y2="124.46" width="0.1524" layer="91"/>
 <junction x="50.8" y="124.46"/>
-<pinref part="U$6" gate="G$1" pin="D"/>
+<pinref part="T6" gate="G$1" pin="D"/>
 <wire x1="111.76" y1="53.34" x2="43.18" y2="55.88" width="0.1524" layer="91"/>
 <wire x1="43.18" y1="55.88" x2="43.18" y2="124.46" width="0.1524" layer="91"/>
 <junction x="43.18" y="124.46"/>
