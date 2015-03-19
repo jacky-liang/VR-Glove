@@ -1,3 +1,6 @@
+//constants
+const boolean DEBUG = true;
+
 //safety voltage caps
 const float max_v = 4.8;
 const float max_motor_v = 4.7;
@@ -23,6 +26,8 @@ void setup()
     pinMode(i,OUTPUT);
   resetOutputs();
   Serial.begin(9600);
+  debug("Began Serial");
+  debug("Setting output pins");
 }
 
 //Returns motor pin based on user defined motor id
@@ -62,8 +67,7 @@ void resetOutputs(){
 //Vibrates motors
 void cycle(int period){
    
-  Serial.print("Cycling with period: ");
-  Serial.println(period);
+  debug("Cycling with period: "+period);
   
   //Output Control
   for(int i = 0;i<getNumMotors();i++)
@@ -87,16 +91,25 @@ int toInt(char k){
   return k-48;
 }
 
-//for testing on 1: &110100000500000%
+//for testing on 1: B110100000500000E
 
 void loop()
 {
   Serial.readBytesUntil('E', inData, 17);
   if (inData[0] == 'B'){
     
+    debug("Received Message: ");
+    if(DEBUG)
+      for (int i = 0; i<17; i++)
+        Serial.print(inData[i]);
+    
     int dType = toInt(inData[1]);
     int dData = toInt(inData[2])*durationUnit;
     int iType = toInt(inData[3]);
+    
+    debug("data type is: "+dType);
+    debug("data is: "+dData);
+    debug("interval type is: "+iType);
     
     //activating corresponding pins
     for (int i = 4;i<10;i++)
@@ -108,6 +121,7 @@ void loop()
       
     boolean isRanged = iType == 1;
     boolean isDefinite = dType == 1;
+    
     //indefinite
     if(!isDefinite)
        toggle(dData, isRanged); 
@@ -122,3 +136,8 @@ void loop()
   inData[0] = '#';
 }
   
+void debug(String x) {
+  if (DEBUG) {
+    Serial.println(x);    
+  }
+}
