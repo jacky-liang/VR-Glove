@@ -112,7 +112,6 @@ void loop()
   //for sending serial commands. 
   if (Serial.available())
     BT.write(Serial.read());
-  delay(100);
 }
 
 /*BLUETOOTH HELPER FUNCTIONS*/
