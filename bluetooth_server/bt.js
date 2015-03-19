@@ -1,12 +1,12 @@
 var OPO = "C0:EE:FB:27:CB:08";
-var BTM = "30:14:12:17:26:73";
+var BTM = "(30:14:12:17:26:73)";
 
 var btSerial = new (require('bluetooth-serial-port')).BluetoothSerialPort();
 var connected = false;
 
 function isTarget(address){
     var targetAddress = BTM;
-    return targetAddress == address;
+    return targetAddress == address || targetAddress == "("+address+")";
 }
  
 function sendMsg(msg){
@@ -35,10 +35,6 @@ btSerial.on('found', function(address, name) {
                 console.log('BT Connected with '+name);
                     
                 connected = true;
-                /*
-                btSerial.on('data', function(buffer) {
-                    console.log(buffer.toString('utf-8'));
-                });*/
 
             }, function () {
                 console.log('Can\'t connect to '+name);
@@ -51,7 +47,6 @@ btSerial.on('found', function(address, name) {
         });
     }
 });
- 
-//btSerial.inquire();
+
 exports.btSerial = btSerial;
 exports.sendMsg = sendMsg;
