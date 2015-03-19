@@ -14,23 +14,17 @@ public class Networking : MonoBehaviour {
 		Debug.Log ("Networking Service Started");
 	}
 
-	static void GetToServer(string query){
+	static IEnumerator GetToServer(string query){
 		Debug.Log ("get to server with query: " + query);
 
 		//Sending Request
 		WebRequest request = WebRequest.Create (serverDest+query);
-		//request.Method = "GET";
-		/*
-		byte[] byteArray = Encoding.UTF8.GetBytes (query);
-		request.ContentType = "application/x-www-form-urlencoded";
-		request.ContentLength = byteArray.Length;
-		//writing request to data stream
-		Stream dataStream = request.GetRequestStream ();
-		dataStream.Write (byteArray, 0, byteArray.Length);
-		dataStream.Close ();*/
 
 		//Getting Response
 		WebResponse response = request.GetResponse ();
+
+		yield return response;
+
 		// Display the status.
 		Console.WriteLine (((HttpWebResponse)response).StatusDescription);
 		Stream dataStream = response.GetResponseStream ();
@@ -45,7 +39,8 @@ public class Networking : MonoBehaviour {
 	}
 
 	public static void send(string msg){
-		GetToServer ("?data="+msg);
+		string query = "?data="+msg;
+		StaticCoroutine.DoCoroutine(GetToServer(query));
 	}
 
 	static void testSend(){
