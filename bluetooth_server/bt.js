@@ -8,7 +8,7 @@ function isTarget(address){
     var targetAddress = BTM;
     return targetAddress == address || targetAddress == "("+address+")";
 }
- 
+
 function sendMsg(msg){
     console.log("writing data: "+msg);
     if(connected){
@@ -16,10 +16,10 @@ function sendMsg(msg){
         if(err)
             console.log("error occurred during write: "+err);
         else
-            console.log("bytesWritten: "+bytesWritten);
+			console.log("bytesWritten: "+bytesWritten);            
     });
     }
-    else{
+    else{ 
         console.log("Can't write b/c device not connected");
     }
 }

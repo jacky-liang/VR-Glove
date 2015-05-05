@@ -19,7 +19,7 @@ String message = "";
 const float max_v = 4.8;
 const float max_motor_v = 4.7;
 
-//pin setup
+//pin setup 
 const int num_motors = 6;
 const int pins[6] = {3,5,6,9,10,11};
 int outputPins[6] = {0,0,0,0,0,0};
@@ -33,28 +33,45 @@ int const messageSize = 17;
 void setup()
 {
   Serial.begin(9600);
-  debug("Began Serial",0);
+  debug("Began Serial", 0);
   
   /*glove control setup*/
-  debug("Setting output pins...",0);
+  debug("Setting output pins...", 0);
+  
   //Set all motor pins to output
   for(int i = 0;i<num_motors;i++)
     pinMode(i,OUTPUT);
   resetOutputs();
+  stopAllMotors();
   
   /*bluetooth setup*/
-  debug("Setting Bluetooth...",0);
+  debug("Setting Bluetooth...", 0);
+  delay(100);
   pinMode(1, INPUT_PULLUP);
+
   /* Init Bluetooth */
   BT.begin(9600);
-  setupBT();
+  debug("Finished Setup!", 0);
 }
 
+void testCycle() {
+  for(int i = 0;i<num_motors;i++)
+    analogWrite(getMotorPin(i), getCyclePercent(getMotorV(9)));
+    
+  delay(1000);
+
+  stopAllMotors();
+  
+  delay(1000);
+}
 
 //for testing on 1: B110100000500000E
 void loop()
-{
+{  
+  delay(10);
   if (BT.available()) {
+    Serial.println("incoming message");
+      tempChar = ' ';
       //Reading input bt stream
       tempChar = (char)BT.read();
       if(tempChar == 'B'){
@@ -95,15 +112,17 @@ void loop()
             
           boolean isRanged = iType == 1;
           boolean isDefinite = dType == 1;
+          Serial.println(isDefinite);
           
           //Running Motors
           //indefinite
           if(!isDefinite)
              toggle(dData, isRanged); 
           //definite
-          if(isDefinite)
-             cycle(dData);  
-          
+          if(isDefinite) {
+            cycle(dData);  
+          }
+
           resetOutputs();
         }
       }      
@@ -112,15 +131,7 @@ void loop()
   //for sending serial commands. 
   if (Serial.available())
     BT.write(Serial.read());
-}
-
-/*BLUETOOTH HELPER FUNCTIONS*/
-void setupBT(){
-    debug("Sending AT Commands to change BT name and password", 1);
-    delay(100);
-    BT.write("AT+NAMEVR-Glove");
-    delay(100);
-    BT.write("AT+PIN4321");
+    
 }
 
 /*GLOVE CONTROL HELPER FUNCTIONS*/
@@ -160,8 +171,14 @@ void resetOutputs(){
 }
 
 //Vibrates motors
+void stopAllMotors() {
+  for(int i = 0;i<num_motors;i++)
+     analogWrite(getMotorPin(i), 0);
+}
+
 void cycle(int period){
    
+  Serial.println("in cycle");
   debug("Cycling with period: "+period,1);
   
   //Output Control
@@ -171,8 +188,7 @@ void cycle(int period){
     
   delay(period);
 
-  for(int i = 0;i<num_motors;i++)
-     analogWrite(getMotorPin(i), 0);
+  stopAllMotors();
 
 }
 

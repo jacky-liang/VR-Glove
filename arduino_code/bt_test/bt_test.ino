@@ -14,7 +14,7 @@ void setup(){
     Serial.begin(9600);
     while(!Serial);
     
-    pinMode(1, INPUT_PULLUP);
+    pinMode(TxD, INPUT_PULLUP);
     
     Serial.println("Initialized Serial");
     /* Init Bluetooth */
@@ -30,7 +30,7 @@ void loop(){
             readCache += (char)BT.read();
 
         message = readCache;
-        readCache = ""; //reset read cache
+        readCache = ""; //reset read cachej
         Serial.println("Message received " + message);
   }
   
@@ -46,4 +46,5 @@ void setupBT(){
     BT.write("AT+NAMEVR-Glove");
     delay(100);
     BT.write("AT+PIN4321");
+    Serial.println("Finished BT Setup");
 }
